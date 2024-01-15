@@ -1,13 +1,16 @@
 require('dotenv').config();
 
+
 const express = require('express')
+const cors = require('cors');
 
 const mongoose = require('mongoose');
 const filmController = require('../controllers/filme'); 
 
-
 const app = express()
 app.use(express.json());
+app.use(cors());
+
 
 app.get('/', filmController.getAllFilms)
 app.post('/', filmController.createFilm)
@@ -22,3 +25,5 @@ app.listen(PORT, ()=>{
 
   console.log('Servidor rodando na porta '+ PORT)
 })
+
+

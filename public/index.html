@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ghibli - cadastro</title>
+  <link href="../src/output.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  
+  <div class="w-full h-screen pt-16 flex flex-col items-center z-20 text-white">
+    <img class="absolute top-0 -z-10 object-cover h-full w-full" src="./images/ghibliBackground.jpg" alt="backgroudStudioghibli">
+    <h1 class="text-3xl font-bold">
+      CADASTRAR FILME
+    </h1>
+    <form class="flex flex-col border w-4/12 p-6 rounded-md backdrop-blur-[2px]	shadow-sm" onsubmit="return getInformationForm(event)">
+      <label class="font-semibold pb-1" for="name">Nome do filme:</label>
+      <input class="pl-2 py-1 text-black font-medium focus:outline-none rounded-sm" type="text" id="name"  placeholder="Digite o nome do filme aqui">
+
+     
+
+      <label class="font-semibold pb-1 pt-4" for="image_url">Link da capa:</label>
+      <input class="pl-2 py-1 text-sky-500 font-medium focus:outline-none rounded-sm" type="text" id="image_url"  placeholder="Cole o link da capa da imagem aqui">
+
+      <label class="font-semibold pb-1 pt-4" for="trailer_url">Link do trailer:</label>
+      <input class="pl-2 py-1 text-sky-500 font-medium focus:outline-none rounded-sm" type="text" id="trailer_url"  placeholder="Cole o link do trailer aqui">
+
+      <label class="font-semibold pb-1 pt-4" for="description">Descrição:</label>
+      <textarea class="pl-2 py-1 text-black font-medium focus:outline-none rounded-sm max-h-36" type="text" id="description"  placeholder="Digite a descrição aqui" >
+      </textarea>
+
+      <button class="mt-5 py-2 px-3 transition ease-in-out bg-white text-black w-3/6 mx-auto font-semibold rounded-md  hover:-translate-y-1 hover:scale-105	hover:bg-lime-200 duration-300" id="buttonSend" type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script src="./js/getform.js"></script>
+  <script src="../src/index.js" ></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
